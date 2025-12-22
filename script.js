@@ -19,11 +19,21 @@ document.querySelector('.contacto-form')?.addEventListener('submit', function(e)
     // Get form data
     const formData = new FormData(this);
     
-    // Show success message
-    alert('¡Gracias por contactarnos! Te responderemos pronto.');
+    // Create and show success message
+    const successMessage = document.createElement('div');
+    successMessage.className = 'success-message';
+    successMessage.textContent = '¡Gracias por contactarnos! Te responderemos pronto.';
+    
+    // Insert message before form
+    this.parentElement.insertBefore(successMessage, this);
     
     // Reset form
     this.reset();
+    
+    // Remove success message after 5 seconds
+    setTimeout(() => {
+        successMessage.remove();
+    }, 5000);
 });
 
 // Add animation on scroll
