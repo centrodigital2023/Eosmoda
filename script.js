@@ -16,9 +16,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 document.querySelector('.contacto-form')?.addEventListener('submit', function(e) {
     e.preventDefault();
     
-    // Get form data
-    const formData = new FormData(this);
-    
     // Create and show success message
     const successMessage = document.createElement('div');
     successMessage.className = 'success-message';
