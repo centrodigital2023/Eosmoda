@@ -127,10 +127,38 @@ vercel env add VARIABLE_NAME
 
 ## Despliegues Automáticos
 
+### Opción A: Integración Nativa de Vercel con GitHub (Recomendado)
+
 Vercel automáticamente despliega tu aplicación cuando:
 - Haces push a la rama principal (producción)
 - Haces push a cualquier otra rama (preview)
 - Abres o actualizas un Pull Request (preview)
+
+Para habilitar esto, simplemente conecta tu repositorio de GitHub en el dashboard de Vercel durante el primer despliegue.
+
+### Opción B: GitHub Actions (Opcional)
+
+Este repositorio incluye workflows de GitHub Actions para despliegues automáticos. Para usarlos:
+
+1. Obtén tu token de Vercel:
+   ```bash
+   vercel tokens create
+   ```
+
+2. Obtén tu Organization ID y Project ID:
+   ```bash
+   vercel link
+   cat .vercel/project.json
+   ```
+
+3. Agrega los siguientes secrets en tu repositorio de GitHub (Settings → Secrets and variables → Actions):
+   - `VERCEL_TOKEN`: Tu token de Vercel
+   - `VERCEL_ORG_ID`: Tu Organization ID
+   - `VERCEL_PROJECT_ID`: Tu Project ID
+
+Los workflows incluidos son:
+- `.github/workflows/vercel-production.yml`: Despliega a producción cuando se hace push a `main`
+- `.github/workflows/vercel-preview.yml`: Despliega previews cuando se hace push a otras ramas
 
 ## Comandos Útiles de Vercel CLI
 
