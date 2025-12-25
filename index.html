@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Eos Moda - Tu tienda de moda online">
+    <title>Eos Moda - Tienda de Moda</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo">
+                    <h1>EOS MODA</h1>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#productos">Productos</a></li>
+                    <li><a href="#nosotros">Nosotros</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="inicio" class="hero">
+            <div class="hero-content">
+                <h2>Bienvenidos a Eos Moda</h2>
+                <p>Descubre las últimas tendencias en moda</p>
+                <a href="#productos" class="btn-primary">Ver Colección</a>
+            </div>
+        </section>
+
+        <section id="productos" class="productos">
+            <div class="container">
+                <h2>Nuestros Productos</h2>
+                <div class="productos-grid">
+                    <div class="producto-card">
+                        <div class="producto-imagen"></div>
+                        <h3>Colección Primavera</h3>
+                        <p>Las últimas tendencias de la temporada</p>
+                        <span class="precio">$49.99</span>
+                    </div>
+                    <div class="producto-card">
+                        <div class="producto-imagen"></div>
+                        <h3>Colección Verano</h3>
+                        <p>Estilo y comodidad para el verano</p>
+                        <span class="precio">$59.99</span>
+                    </div>
+                    <div class="producto-card">
+                        <div class="producto-imagen"></div>
+                        <h3>Colección Otoño</h3>
+                        <p>Elegancia para el otoño</p>
+                        <span class="precio">$69.99</span>
+                    </div>
+                    <div class="producto-card">
+                        <div class="producto-imagen"></div>
+                        <h3>Colección Invierno</h3>
+                        <p>Calidez y estilo en invierno</p>
+                        <span class="precio">$79.99</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="nosotros" class="nosotros">
+            <div class="container">
+                <h2>Sobre Nosotros</h2>
+                <p>En Eos Moda, nos dedicamos a ofrecer las últimas tendencias en moda con la mejor calidad y precios accesibles. Nuestra misión es que cada persona pueda expresar su estilo único.</p>
+            </div>
+        </section>
+
+        <section id="contacto" class="contacto">
+            <div class="container">
+                <h2>Contacto</h2>
+                <form class="contacto-form">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Email" required>
+                    <label for="mensaje">Mensaje</label>
+                    <textarea id="mensaje" name="mensaje" placeholder="Mensaje" rows="5" required></textarea>
+                    <button type="submit" class="btn-primary">Enviar</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Eos Moda. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
