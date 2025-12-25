@@ -5,6 +5,7 @@ on:
     branches:
       - main
       - copilot/deploy-application
+      - copilot/fix-404-error-handling
   workflow_dispatch:
 
 permissions:
