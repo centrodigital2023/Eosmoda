@@ -4,7 +4,6 @@ on:
   push:
     branches:
       - main
-      - copilot/import-eos-moda1-app
       - copilot/deploy-application
   workflow_dispatch:
 
